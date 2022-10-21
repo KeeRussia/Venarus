@@ -55,11 +55,13 @@ if (getWindowWidth() <= 767) {
     } 
     sliderLine.style.left = -offset + 'px';
   })
-} else { //Для больших экранов
+};
+
+if (getWindowWidth() >= 767) { //Для больших экранов
   const sliderNext = document.querySelector('.slider-next');
   const sliderPrev = document.querySelector('.slider-prev');
-  
 
+  
   function rotate() {
     let slides = document.querySelectorAll('.slide');
     for (i=0; i<slides.length; i++) {
@@ -109,57 +111,11 @@ if (getWindowWidth() <= 767) {
     sliderNext.onclick = rotate;
     sliderPrev.onclick = rotateBackwards;
   }
-  
 
-
-
-// let slides = document.querySelectorAll('.slide');
-// console.log(slides);
-// let slider = [];
-// for (let i = 0; i < slides.length; i++) {
-//   slider[i] = slides[i].src;
-//   slides[i].remove();
-// }
-// console.log(slider);
-
-// let step = 0;
-// let offset = 0;
-
-// function draw() {
-//   let img = document.createElement('img');
-//   img.src = slider[step];
-//   img.classList.add('slide');
-//   img.style.left = offset*264 + 'px';
-//   document.querySelector('.slider-line').appendChild(img);
-//   if (step + 1 == slider.length) {
-//     step = 0;
-//   } else {
-//     step ++;
-//   }
-//   offset = 1;
-// }
-
-// function left() {
-//   nextButton.onclick = null;
-//   let slides2 = document.querySelectorAll('.slide');
-//   let offset2 = 0;
-//   for (let i = 0; i < slides2.length; i++) {
-//     slides2[i].style.left = offset2*264 - 264 + 'px';
-//     offset2++;
-//   }
-//   setTimeout(function() {
-//     slides2[0].remove();
-//     draw();
-//     nextButton.onclick = left;
-//   }, 1000
-//   );
-// }
-
-// draw();draw();
-
-
-// let prevButton = document.querySelector('.slider-prev');
-// let nextButton = document.querySelector('.slider-next');
-
-// nextButton.onclick = left;
-// prevButton.onclick = right;
+// Text hidden tip
+const tip = document.querySelector('.advantages__hidden-text');
+const tipTrigger = document.querySelector('.hidden-trigger');
+tipTrigger.onclick = function() {
+  tip.classList.toggle('advantages__hidden-text-active');
+};
+// Text hidden tip end
