@@ -119,3 +119,19 @@ tipTrigger.onclick = function() {
   tip.classList.toggle('advantages__hidden-text-active');
 };
 // Text hidden tip end
+
+// Reviews popup
+const popupTrigger = document.querySelectorAll('.popup-trigger');
+const reviewsPopup = document.querySelector('.reviews__popup');
+const reviewsCloseButton = document.querySelector('.reviews__close-button');
+
+popupTrigger.forEach(function(trigger) {
+  trigger.addEventListener('click', function() {
+    reviewsPopup.classList.add('reviews__popup-active');
+  });
+})
+
+
+reviewsCloseButton.addEventListener('click', function() {
+  reviewsPopup.classList.remove('reviews__popup-active');
+});

@@ -299,7 +299,7 @@
       <div class="reviews-wrapper">
         <div class="reviews-column">
           <h2 class="reviews__title">Мнение специалистов</h2>
-          <p class="reviews__text">Фармакотерапия — неотъемлемый компонент современного лечения хронического заболевания вен.</p>
+          <p class="reviews__text">Фармакотерапия —<br>неотъемлемый компонент современного лечения хронического заболевания вен.</p>
         </div>
         <div class="reviews-column">
                     <!-- Slider main container -->
@@ -307,13 +307,17 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
-              <div class="swiper-slide"><img src="img/reviews-slide-1.jpg" alt="" class="reviews__img"></div>
-              <div class="swiper-slide"><img src="img/reviews-slide-1.jpg" alt="" class="reviews__img"></div>
-              <div class="swiper-slide"><img src="img/reviews-slide-1.jpg" alt="" class="reviews__img"></div>
+              <div class="swiper-slide popup-trigger"><img src="img/reviews-slide-1.jpg" alt="" class="reviews__img"></div>
+              <div class="swiper-slide popup-trigger"><img src="img/reviews-slide-1.jpg" alt="" class="reviews__img"></div>
+              <div class="swiper-slide popup-trigger"><img src="img/reviews-slide-1.jpg" alt="" class="reviews__img"></div>
               
             </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
+          </div>
+          <div class="reviews__popup">
+            <iframe class="reviews__iframe" width="70%" height="70%" src="https://www.youtube.com/embed/Gkr_PhPkbv4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <button class="reviews__close-button">Закрыть</button>
           </div>
         </div>
       </div>
@@ -350,21 +354,11 @@ const reviewsSlider = new Swiper('.reviews__slider', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
+  spaceBetween: 45,
 
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
   },
 });
 </script>
