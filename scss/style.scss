@@ -200,20 +200,19 @@ h1, h2, h3, h4, h5, h6 {
   .side-menu__list a {
     padding-left: 5%;
     &:first-child {
-      padding-top: 95px;
+      padding-top: 45px;
     }
   }
 
   .side-menu__list-item{
-    padding-top: 45px;
     &:first-child {
-      padding-top: 125px;
+      padding-top: 55px;
     }
     &:nth-child(4) .side-menu__svg {
       top: 100px;
     }
     &:nth-child(5) .side-menu__svg {
-      top: 50px;
+      top: 90px;
     }
   }
 }
@@ -365,7 +364,6 @@ button:disabled {
 .promo{
   margin-top: 50px;
   position: relative;
-  min-height: 100vh;
   overflow: hidden;
   &__svg {
     position: absolute;
@@ -793,7 +791,7 @@ button:disabled {
 
 .marquee {
   max-width: 100%;
-  margin: 40px 0;
+  margin: 20px 0;
   border-top: 1px solid #47093E;
   border-bottom: 1px solid #47093E;
   &__inner {
@@ -836,12 +834,12 @@ button:disabled {
 // Advantages
 
   .advantages {
-    margin-top: 100px;
+    margin-top: 80px;
     margin-bottom: 40px;
     &-top {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 100px;
+      margin-bottom: 50px;
       position: relative;
     }
   }
@@ -852,7 +850,6 @@ button:disabled {
     max-width: 97px;
     text-align: center;
     position: relative;
-    margin: 0;
     & br {
       display: none;
     }
@@ -1022,6 +1019,7 @@ button:disabled {
       }
       &:first-child {
         padding-left: 50px;
+        margin-right: 80px;
         &::before {
           left: -10px;
         }
@@ -1143,7 +1141,7 @@ button:disabled {
 
 .production{
   position: relative; 
-  min-height: 100vh;
+  min-height: 320px;
   &__svg {
     position: absolute;
     z-index: -1;
@@ -1164,7 +1162,7 @@ button:disabled {
 
 .production__slider {
   width: 270px;
-  height: 300px;
+  height: 210px;
   & .production__slide-1{
     background-image: url(../img/production-slide-1.png);
     background-size: contain;
@@ -1176,7 +1174,7 @@ button:disabled {
     background-repeat: no-repeat;
   }
   .swiper-button-prev, .swiper-rtl .swiper-button-next, .swiper-button-next, .swiper-button-prev { 
-    top: 70%;
+    top: 90%;
   }
   .swiper-button-prev, .swiper-rtl .swiper-button-next {
     left: auto;
@@ -1229,7 +1227,8 @@ button:disabled {
 
 @media (min-width: 768px) {
   .production{
-    min-height: 100vh;
+    padding-top: 150px;
+    margin-bottom: 100px;
     display: flex;
     align-items: center;
     &__svg {
@@ -1407,7 +1406,7 @@ button:disabled {
   }
 .reviews__slider {
   width: 100%;
-  min-height: 100vh;
+  min-height: 250px;
   & .swiper-pagination {
     position: relative;
     bottom: -10%;
@@ -1725,7 +1724,7 @@ background-blend-mode: multiply;
 background-size: 100% 60px;
 background-repeat: no-repeat;
 background-position: 0 100%;
-padding: 100px 0;
+padding: 40px 0;
 text-align: center;
 &__img {
   width: 100%;
@@ -1943,4 +1942,16 @@ text-align: center;
 
 .reviews-wrapper .reviews__popup-active {
   z-index: 999;
+}
+
+@media (min-width: 360px) {
+  .production__slide-1::after {
+    top: 28%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .production {
+    padding-top: 240px;
+  }
 }
