@@ -149,8 +149,7 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     z-index: -1;
     bottom: 0;
-    opacity: 0;
-    transition: all 5s ease;  //Так лучше, поверьте :)
+    transition: all 5s ease;  
   }
 }
 
@@ -987,7 +986,7 @@ button:disabled {
     }
 
     50% {
-      transform: translateX(-10px);
+      transform: translateX(-5px);
     }
 
     100% {
@@ -1001,7 +1000,7 @@ button:disabled {
     }
 
     50% {
-      transform: translateX(10px);
+      transform: translateX(5px);
     }
 
     100% {
@@ -1390,6 +1389,12 @@ button:disabled {
 
 }
 
+@media (min-width: 1920px) {
+  .production {
+    padding-top: 300px;
+  }
+}
+
 // Production end 
 
 
@@ -1526,11 +1531,15 @@ button:disabled {
   }
 }
 
+@media (min-width: 1920px) {
+  .reviews {
+    margin-bottom: 0;
+  }
+}
+
 //Reviews end
 
 //Info
-
-
 
 .info__grid-item span .br-span {
   display: none;
@@ -1541,7 +1550,7 @@ button:disabled {
   position: relative;
   &__svg {
     position: absolute;
-    top: 0;
+    top: 10%;
     right: 0;
     bottom: 0;
     left: 0;
@@ -1701,6 +1710,7 @@ button:disabled {
 @media (min-width: 1920px) {
   .info {
     padding-top: 350px;
+    padding-bottom: 100px;
   }
 }
 
@@ -1794,6 +1804,18 @@ text-align: center;
     height: 61px;
   }
 
+  .buy-wrapper .buy__title {
+    font-size: 30px;
+  }
+  .buy-wrapper .buy__text {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .buy-column {
+    min-width: 263px;
+  }
+
 }
 
 @media (min-width: 1920px) {
@@ -1861,6 +1883,64 @@ text-align: center;
     & .disclaimer {
       grid-column: 1/-1;
     }
+    &__socials {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer__adress {
+    grid-column: 2/3;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer .disclaimer {
+    margin-bottom: 50px;
+    font-size: 31px;
+  }
+  .footer .pharm__desc {
+    max-width: 210px;
+  }
+  .footer__text, .footer__adress {
+    text-align: left;
+  }
+  .footer__socials {
+    justify-content: start;
+    padding-left: 50px;
+    gap: 40px;
+  }
+  .footer-wrapper {
+    text-align: left;
+    padding-left: 80px;
   }
 }
 //Footer end
+
+
+// Всякие мелочи 
+@media (min-width: 1440px) {
+  .side-menu__list-item:nth-child(3) .side-menu__svg {
+    top: 70px;
+}
+.side-menu__list-item:nth-child(4) .side-menu__svg {
+  top: 200px;
+}
+
+.side-menu__list-item:nth-child(5) .side-menu__svg {
+  top: 80px;
+}
+
+.side-menu__list a:first-child {
+  padding-top: 80px;
+}
+}
+
+.reviews-wrapper .reviews__popup-active {
+  z-index: 999;
+}
