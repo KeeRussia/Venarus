@@ -37,7 +37,7 @@ if (getWindowWidth() <= 767) {
   const sliderPrev = document.querySelector('.slider-prev');
   
   sliderPrev.addEventListener('click', function(){
-    offset = offset - 264; 
+    offset = offset - 364; 
     sliderNext.disabled = false;
     if (offset < 0) {
       offset = 0;
@@ -47,10 +47,10 @@ if (getWindowWidth() <= 767) {
   })
   
   sliderNext.addEventListener('click', function(){
-    offset = offset + 264; 
+    offset = offset + 364; 
     sliderPrev.disabled = false;
-    if (offset > 568) {
-      offset = 528;
+    if (offset > 768) {
+      offset = 728;
       sliderNext.disabled = true;
     } 
     sliderLine.style.left = -offset + 'px';
